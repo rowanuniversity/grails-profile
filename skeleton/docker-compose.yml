@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  web:
+    container_name: ${CONTAINER_NAME}
+    build:
+      context: .
+    ports:
+      - ${APP_PORT_NUMBER}:8080
+    volumes:
+      - ./:/app
+    environment:
+      TZ: "America/New_York"
+      NLS_LANG: ".AL32UTF8"
+    env_file:
+      - .env
+    restart: unless-stopped
