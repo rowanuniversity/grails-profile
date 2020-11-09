@@ -86,12 +86,12 @@ endpoints:
 
 ---
 grails:
+  mail:
+    host: "mail.rowan.edu"
+    port: 25
   plugin:
     auditLog:
       auditDomainClassName: "edu.rowan.AuditTrail"
-    mail:
-      host: "mail.rowan.edu"
-      port: 25
     springsecurity:
       cas:
         serverUrlPrefix: "https://login.rowan.edu/cas"
