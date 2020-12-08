@@ -16,15 +16,15 @@ version '1.0.0'
 
 grailsPublish {
     // TODO: Provide values here
-    user = 'user'
-    key = 'key'
-    githubSlug = 'foo/bar'
+    user = System.getenv('BINTRAYUSER')
+    key = System.getenv('BINTRAYKEY')
+    githubSlug = 'rowanuniversity/grails-profile'
     license {
-        name = 'Apache-2.0'
+        name = 'MIT'
     }
-    title = "My Profile"
-    desc = "Full profile description"
-    developers = [johndoe:"John Doe"]
+    title = "Rowan University Grails Profile"
+    desc = " A profile for use with Rowan University Grails applications"
+    developers = [coltri:"David Coltri"]
 }
 
 repositories {
