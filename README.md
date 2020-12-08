@@ -2,12 +2,6 @@
 
 Make sure that you've got grails 3.3.11 installed and JDK 1.8
 
-Clone this repository first, and then run:
-
-```
-./gradlew install
-```
-
 Then you can create a new app using this profile with:
 
 ```
