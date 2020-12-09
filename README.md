@@ -2,16 +2,32 @@
 
 Make sure that you've got grails 3.3.11 installed and JDK 1.8
 
-Clone this repository first, and then run:
-
+Edit the file `USER_HOME/.grails/settings.groovy` (if the file does not exist, create it):
 ```
-./gradlew install
+grails {
+  profiles {
+    rowan {
+      groupId = "edu.rowan"
+      version = "1.0.0"
+    }
+    repositories {
+      rowanRepo {
+        url = "https://dl.bintray.com/rowanuniversity/grails-profiles"
+        snapshotsEnabled = true
+      }
+      grailsCentral {
+        url = "https://repo.grails.org/grails/core"
+        snapshotsEnabled = true
+      }
+    }
+  }
+}
 ```
 
 Then you can create a new app using this profile with:
 
 ```
-grails create-app APP_NAME --profile=edu.rowan:rowan:1.0.1
+grails create-app APP_NAME --profile=rowan
 ```
 
 Features:
@@ -38,3 +54,14 @@ Features:
 - Select2 4.0.8
 - Gijgo JavaScript Library v1.9.13 (Date Picker)
 - accounting.js v0.4.2
+
+
+## To Upload to Bintray
+
+Ensure the environment variables below are set:
+```
+export BINTRAYUSER="{YOUR BINTRAY USERNAME}"
+export BINTRAYKEY="{YOUR BINTRAY ACCESS KEY}"
+```
+
+Then from the root of the project, execute `./gradlew bintrayUpload`

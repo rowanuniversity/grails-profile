@@ -6,7 +6,7 @@ skeleton:
     - grails-app/init/*
 repositories:
   - https://plugins.gradle.org/m2/
-  - https://dl.bintray.com/coltri/profiles
+  - https://dl.bintray.com/rowanuniversity/grails-profiles/
 features:
   defaults:
     - hibernate
@@ -14,7 +14,7 @@ features:
 build:
   repositories:
     - https://plugins.gradle.org/m2/
-    - https://dl.bintray.com/coltri/profiles
+    - https://dl.bintray.com/rowanuniversity/grails-profiles/
   plugins:
     - org.grails.grails-web
     - org.grails.grails-gsp

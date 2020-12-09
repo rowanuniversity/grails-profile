@@ -12,19 +12,30 @@ apply plugin: "org.grails.grails-profile"
 apply plugin: "org.grails.grails-profile-publish"
 
 group 'edu.rowan'
-version '1.0.1'
+version '1.0.0'
 
 grailsPublish {
     // TODO: Provide values here
     user = System.getenv('BINTRAYUSER')
     key = System.getenv('BINTRAYKEY')
     githubSlug = 'rowanuniversity/grails-profile'
+    userOrg = 'rowanuniversity' // Optional
+    repo = 'grails-profiles'       // Optional, default to 'plugins'
     license {
         name = 'MIT'
     }
     title = "Rowan University Grails Profile"
     desc = " A profile for use with Rowan University Grails applications"
     developers = [coltri:"David Coltri"]
+}
+
+bintray {
+  pkg {
+    userOrg = 'rowanuniversity' // If you want to publish to an organization
+    name = "grails-profile"
+    issueTrackerUrl = "https://github.com/rowanuniversity/grails-profile/issues"
+    vcsUrl = "https://github.com/rowanuniversity/grails-profile"
+  }
 }
 
 repositories {
