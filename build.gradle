@@ -32,7 +32,7 @@ grailsPublish {
 bintray {
   pkg {
     userOrg = 'rowanuniversity' // If you want to publish to an organization
-    name = "grails-profile"
+    name = "rowan"
     issueTrackerUrl = "https://github.com/rowanuniversity/grails-profile/issues"
     vcsUrl = "https://github.com/rowanuniversity/grails-profile"
   }
