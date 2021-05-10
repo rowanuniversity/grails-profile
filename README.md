@@ -6,13 +6,9 @@ Edit the file `USER_HOME/.grails/settings.groovy` (if the file does not exist, c
 ```
 grails {
   profiles {
-    rowan {
-      groupId = "edu.rowan"
-      version = "1.0.0"
-    }
     repositories {
       rowanRepo {
-        url = "https://dl.bintray.com/rowanuniversity/grails-profiles"
+        url = "https://rowan.jfrog.io/artifactory/default-maven-local"
         snapshotsEnabled = true
       }
       grailsCentral {
@@ -27,7 +23,7 @@ grails {
 Then you can create a new app using this profile with:
 
 ```
-grails create-app APP_NAME --profile=rowan
+grails create-app APP_NAME --profile=edu.rowan:rowan:1.0.1
 ```
 
 Features:
@@ -56,12 +52,12 @@ Features:
 - accounting.js v0.4.2
 
 
-## To Upload to Bintray
+## To Upload to JFROG Platform
 
 Ensure the environment variables below are set:
 ```
-export BINTRAYUSER="{YOUR BINTRAY USERNAME}"
-export BINTRAYKEY="{YOUR BINTRAY ACCESS KEY}"
+export JFROGUSER="{YOUR JFROG USERNAME}"
+export JFROGPASSWORD="{YOUR JFROG ACCESS KEY}"
 ```
 
-Then from the root of the project, execute `./gradlew bintrayUpload`
+Then from the root of the project, execute `./gradlew publish`
