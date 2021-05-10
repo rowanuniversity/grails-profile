@@ -5,16 +5,18 @@ skeleton:
     - grails-app/views/*
     - grails-app/init/*
 repositories:
-  - https://plugins.gradle.org/m2/
-  - https://dl.bintray.com/rowanuniversity/grails-profiles/
+  - https://rowan.jfrog.io/artifactory/grails-core-remote/
+  - https://rowan.jfrog.io/artifactory/plugins-gradle-org-remote/
+  - https://rowan.jfrog.io/artifactory/default-maven-local/
 features:
   defaults:
     - hibernate
     - asset-pipeline
 build:
   repositories:
-    - https://plugins.gradle.org/m2/
-    - https://dl.bintray.com/rowanuniversity/grails-profiles/
+    - https://rowan.jfrog.io/artifactory/grails-core-remote/
+    - https://rowan.jfrog.io/artifactory/plugins-gradle-org-remote/
+    - https://rowan.jfrog.io/artifactory/default-maven-local/
   plugins:
     - org.grails.grails-web
     - org.grails.grails-gsp
